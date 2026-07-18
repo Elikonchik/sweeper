@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineSweeper</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload="onInit()">
+
+    <h1>💣 Elik's MineSweeper</h1>
+
+    <section class="game-info">
+
+        <button class="dark-mode-btn" onclick="onToggleDarkMode()">🌙</button>
+
+        <button class="smiley" onclick="resetGame()">😃</button>
+
+        <button onclick="onUndo()">↩️ Undo</button>
+
+        <button class="hint" onclick="onHint()">💡💡💡</button>
+
+        <button class="mega-hint" onclick="onMegaHint()">
+            🔦 Mega Hint
+        </button>
+
+        <button class="safe-click" onclick="onSafeClick()">
+            🛡️ Safe: <span class="safe-count">3</span>
+        </button>
+
+        <button class="exterminator" onclick="onMineExterminator()">
+            💀 Exterminator
+        </button>
+
+    </section>
+
+    <section class="game-info">
+
+        <div>
+            ⏱️ <span class="timer">0</span>
+        </div>
+
+        <div>
+            💣 <span class="mines-left">2</span>
+        </div>
+
+        <div>
+            🚩 <span class="flags">0</span>
+        </div>
+
+        <div>
+            ❤️ <span class="lives">3</span>
+        </div>
+
+        <div>
+            🏆 Best: <span class="best-score">--</span>
+        </div>
+
+    </section>
+
+    <table>
+        <tbody class="board"></tbody>
+    </table>
+
+    <section class="levels">
+
+        <button onclick="setLevel(4,2)">Beginner</button>
+
+        <button onclick="setLevel(8,14)">Medium</button>
+
+        <button onclick="setLevel(12,32)">Expert</button>
+
+    </section>
+
+
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
